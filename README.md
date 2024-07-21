@@ -22,10 +22,11 @@ $ cat "#!/usr/bin/env node\n\nprocess.on('SIGINT', () => {\n  console.log('Proce
 $ chmod a+x ./bin/cli.js
 $ touch src/command.js
 $ yarn init
-$ yarn add -D eslint jest babel-jest @babel/core @babel/cli @babel/preset-env semver @stylistic/eslint-plugin eslint-plugin-jest standard @create-jest @jest/globals ts-node typescript
+$ yarn add -D eslint jest babel-jest @babel/core @babel/cli @babel/preset-env semver @stylistic/eslint-plugin eslint-plugin-jest standard @create-jest @jest/globals ts-node typescript @tsconfig/node20
 $ yarn add @inquirer/prompts chalk commander dotenv ora configstore
 $ yarn eslint --init
 $ yarn create-jest
+$ yarn tsc --init
 $ yarn add .
 $ yarn commit -m 'added CLI scaffolding'
 $ yarn link
