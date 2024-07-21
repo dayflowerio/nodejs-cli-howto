@@ -24,7 +24,7 @@ $ yarn add -D semver
 $ yarn add @inquirer/prompts chalk commander dotenv ora configstore
 ```
 
-1. Add bin clause to package.json
+2. Add `bin` clause to package.json
 ```
 ...
   "bin" {
