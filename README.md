@@ -17,11 +17,15 @@ $ gh repo new
 $ cd name-of-new-repo
 $ mkdir bin
 $ mkdir -p src/lib/commands
-$ cat "#!/usr/bin/env node" > ./bin/cli.js
+$ cat "#!/usr/bin/env node\n\nprocess.on('SIGINT', () => {\n  console.log('Process interrupted. Exiting gracefully.')\n  process.exit(0)\n})\n" > ./bin/cli.js
+$ chmod a+x ./bin/cli.js
 $ touch src/command.js
 $ yarn init
 $ yarn add -D semver
 $ yarn add @inquirer/prompts chalk commander dotenv ora configstore
+$ yarn add .
+$ yarn commit -m 'added scaffolding'
+$ yarn link
 ```
 
 2. Add `bin` clause to package.json
@@ -63,3 +67,5 @@ yarn.lock
 - https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/
 - https://www.twilio.com/en-us/blog/how-to-build-a-cli-with-node-js
 - https://webbylab.com/blog/best-practices-for-building-cli-and-publishing-it-to-npm/
+- https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e
+- 
