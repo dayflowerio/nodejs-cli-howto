@@ -1,4 +1,4 @@
-# nodejs-cli-howto
+# Node.js CLI HOWTO
 Docs for creating an NPM distributable Node.js CLI following best practices
 
 ## Requirements
